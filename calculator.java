@@ -3,43 +3,45 @@ package dataTypes;
 import java.util.Scanner;
 
 class operation {
-	void add(int num1, int num2) {
-		int addition = num1+num2;
+	void add(double num1, double num2) {
+		double addition = num1+num2;
 		System.out.println("the addition result is: " + addition);
 	}
-	void sub(int num1, int num2) {
-		int Subtraction = num1-num2;
+	void sub(double num1, double num2) {
+		double Subtraction = num1-num2;
 		System.out.println("the Subtraction result is: " + Subtraction);
 	}
-	void mul(int num1, int num2) {
-		int m = num1*num2;
+	void mul(double num1, double num2) {
+		double m = num1*num2;
 		System.out.println("the multiplication result is: " + m);
 	}
-	void div(int num1, int num2) {
-		int d = num1/num2;
+	void div(double num1, double num2) {
+		double d = num1/num2;
 		System.out.println("the division result is: " + d);
 	}
-	void perc (int num1, int num2) {
-		int per = (num1+num2);
-		System.out.println("The percentage result is: " + per);
+	void perc (double num1, double num2) {
+		double per = ((num1+num2)*100)/20;
+		System.out.println("The percentage result is: " + Math.round(per)+"%");
 	}
-	void mod(int num1, int num2) {
-		int m = num1%num2;
+	void mod(double num1, double num2) {
+		double m = num1%num2;
 		System.out.println("the modulus result is: " + m);
 	}
 }
 public class calculator {
 
+	private static Scanner sc;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 
 		System.out.println("enter the num 1");
-		int num1 = sc.nextInt();
+		double num1 = sc.nextDouble();
 		
 		System.out.println("enter the num 2");
-		int num2 = sc.nextInt();
+		double num2 = sc.nextDouble();
 
 		System.out.println("enter operator \n"
 				+ "1. Addition\n"

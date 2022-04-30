@@ -20,7 +20,7 @@ class operation {
 		System.out.println("the division result is: " + d);
 	}
 	void perc (double num1, double num2) {
-		double per = ((num1+num2)*100)/20;
+		float per = (float)((num1+num2)*100)/20;
 		System.out.println("The percentage result is: " + Math.round(per)+"%");
 	}
 	void mod(double num1, double num2) {
